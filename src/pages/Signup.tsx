@@ -34,6 +34,7 @@ const navigate=useNavigate();
   const userDetails:string=JSON.stringify({name,num,email,timeStamp:new Date().getTime()});
   localStorage.setItem("user",userDetails);
   navigate("/home");
+  window.location.reload();
  }
  else{
    return toast.error("please enter valid input");
